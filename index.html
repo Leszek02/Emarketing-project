@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Agentic Student - Twój asystent na wykładach</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pricing.html" id="nav-pricing">Cennik</a>
+    </nav>
+</header>
+
+<section id="hero">
+    <h1>Agentic Student</h1>
+    <p>Twój osobisty agent AI, który uczestniczy w zajęciach za Ciebie lub razem z Tobą. Nigdy więcej nie przegap ważnych informacji z wykładu.</p>
+    <a href="#signup" id="cta-main" class="cta-button">Zacznij teraz</a>
+</section>
+
+<section id="problem">
+    <h2>Dlaczego nas potrzebujesz?</h2>
+    <ul>
+        <li><strong>Niska frekwencja:</strong> Nie zawsze możesz być na miejscu, a wiedza ucieka.</li>
+        <li><strong>Przeciążenie poznawcze:</strong> Słuchanie, oglądanie i notowanie naraz jest męczące.</li>
+        <li><strong>Brak notatek:</strong> Trudności z koncentracją prowadzą do luk w wiedzy.</li>
+    </ul>
+</section>
+
+<section id="features">
+    <h2>Funkcje</h2>
+    <ul>
+        <li><strong>Transkrypcja Live:</strong> Zamiana mowy profesora na tekst w czasie rzeczywistym.</li>
+        <li><strong>Automatyczne Podsumowania:</strong> AI generuje kluczowe punkty i wnioski z każdych zajęć.</li>
+        <li><strong>Wsparcie dla Dyslektyków:</strong> Specjalne formatowanie tekstu ułatwiające czytanie.</li>
+    </ul>
+</section>
+
+<section id="cta-secondary">
+    <h2>Gotowy na lepsze wyniki w nauce?</h2>
+    <p>Dołącz do studentów, którzy już oszczędzają czas.</p>
+    <a href="#signup" class="cta-button">Zarejestruj się bezpłatnie</a>
+</section>
+
+<section id="signup">
+    <h2>Formularz zgłoszeniowy</h2>
+    <form id="signup-form">
+        <div>
+            <label for="email">Email (wymagane):</label>
+            <input type="email" id="email" name="email" required placeholder="ala.kowalska@example.com">
+        </div>
+        <div>
+            <label for="role">Rola (wymagane):</label>
+            <select id="role" name="role" required>
+                <option value="">Wybierz...</option>
+                <option value="student">Student</option>
+                <option value="licealista">Licealista</option>
+                <option value="uczeń">Uczeń</option>
+                <option value="wykładowca">Wykładowca</option>
+            </select>
+        </div>
+        <div>
+            <label for="institution">Instytucja (wymagane):</label>
+            <input type="text" id="institution" name="institution" required placeholder="np. Politechnika Poznańska">
+        </div>
+        <div>
+            <label for="education-level">Stopień edukacji (wymagane):</label>
+            <select id="education-level" name="education-level" required>
+                <option value="">Wybierz...</option>
+                <option value="podstawowa">Szkoła podstawowa</option>
+                <option value="srednia">Szkoła średnia</option>
+                <option value="inzynierskie">Studia inżynierskie/licencjackie</option>
+                <option value="magisterskie">Studia magisterskie</option>
+            </select>
+        </div>
+        <div>
+            <label for="goal">Cel (opcjonalne):</label>
+            <textarea id="goal" name="goal" rows="2" placeholder="Np. łatwiejszy dostęp do wiedzy"></textarea>
+        </div>
+        <button type="submit" class="cta-button" style="border:none; cursor:pointer;">Wyślij zgłoszenie</button>
+    </form>
+</section>
+
+<section id="faq">
+    <h2>FAQ</h2>
+    <p><strong>Czy aplikacja działa offline?</strong><br>Tak, możesz nagrać wykład i przesłać go do analizy później.</p>
+    <p><strong>Czy wykładowca musi wyrazić zgodę?</strong><br>Zalecamy poinformowanie prowadzącego o korzystaniu z asystenta wspierającego naukę.</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Agentic Student PoC</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
