@@ -1,12 +1,11 @@
 # Agentic Student
 
-## Links
-- Landing: index.html
-- Pricing: pricing.html
+## Page
+https://leszek02.github.io/Emarketing-project/index.html
 
-## Form fields
+## Pola formularza
 - Email
-- Role
-- Institution
-- Education level
-- Goal
+- Rola
+- Instytucja
+- Stopień edukacji
+- Cel
