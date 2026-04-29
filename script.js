@@ -1,3 +1,4 @@
+
 function getPagePath() {
     return window.location.pathname || '';
 }
@@ -56,7 +57,8 @@ function setupCtaClicks() {
 
             pushToDataLayer('cta_click', {
                 cta_id: ctaId,
-                cta_location: ctaLocation
+                cta_location: ctaLocation,
+                variant: localStorage.getItem('variant')
             });
         });
     });
@@ -78,7 +80,8 @@ function setupFormSubmit() {
         pushToDataLayer('form_submit', {
             role: role,
             consent: 0,
-            has_email: email ? 1 : 0
+            has_email: email ? 1 : 0,
+            variant: localStorage.getItem('variant')
         });
 
         alert('Dziękujemy za zgłoszenie! \nEmail: ' + email + '\nRola: ' + role);
@@ -96,4 +99,15 @@ document.addEventListener('DOMContentLoaded', function() {
     setupScroll75Event();
     setupCtaClicks();
     setupFormSubmit();
-});
+
+    var variant = localStorage.getItem('variant') || (Math.random() < 0.5 ? 'A' : 'B');
+    localStorage.setItem('variant', variant);
+
+         pushToDataLayer('form_submit', {
+            variant: localStorage.getItem('variant')
+        });
+
+    document.getElementById('ab-testing').textContent = variant === 'A'
+        ? 'Twój osobisty agent AI, który uczestniczy w zajęciach za Ciebie lub razem z Tobą. Nigdy więcej nie przegap ważnych informacji z wykładu.'
+        : 'Poznaj swojego osobistego AI — towarzysza nauki, który uczestniczy w zajęciach razem z Tobą i dba o to, abyś nie ominął żadnej ważnej informacji.';
+    });
