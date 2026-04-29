@@ -103,9 +103,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var variant = localStorage.getItem('variant') || (Math.random() < 0.5 ? 'A' : 'B');
     localStorage.setItem('variant', variant);
 
-         pushToDataLayer('form_submit', {
-            variant: localStorage.getItem('variant')
-        });
+    pushToDataLayer('test_variant', {
+        variant: localStorage.getItem('variant')
+    });
 
     document.getElementById('ab-testing').textContent = variant === 'A'
         ? 'Twój osobisty agent AI, który uczestniczy w zajęciach za Ciebie lub razem z Tobą. Nigdy więcej nie przegap ważnych informacji z wykładu.'
